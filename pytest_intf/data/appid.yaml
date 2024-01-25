@@ -1,0 +1,17 @@
+-
+  user:
+    app_id: cl004c1891f8ea20f
+    secret: 'ec290077c5e89fe5498289a1f2ab754267c1a1bc'
+  expires_in: 7200
+
+-
+  user:
+    app_id: cl004c1891f8ea202
+    secret: 'ec290077c5e89fe5498289a1f2ab754267c1a1bc'
+    expires_in: 7200
+
+- - user:
+      app_id: cl004c1891f8ea202
+      secret: 'ec290077c5e89fe5498289a1f2ab754267c1a1bc'
+      expires_in: 7200
+
