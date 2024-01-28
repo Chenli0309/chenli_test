@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 # --*-- coding: utf-8 --*--
 # @Author: chen li
@@ -9,16 +10,15 @@ import allure
 import jsonpath
 import pytest
 import os
-from pytest_intf.api_key.api_key import ApiKey
-from pytest_intf.data_driver import yaml_driver
+from pytest_intf_logic.api_key.api_key import ApiKey
+from pytest_intf_logic.data_driver import yaml_driver
 #from pytest_intf.params.allParams import *
 
 
 @allure.epic("接口测试")
-class Test_ApiCase:
-    @allure.story('00.获取token')
-    @pytest.mark.parametrize('UserData', yaml_driver.load_yaml('./data/userinfo.yaml'))
-    def test_login(self, UserData):
+class ApiCase:
+
+    def login(self, UserData):
         #动态获取参数化生成标题
         allure.dynamic.title(UserData['title'])
         # 初始化工具类
@@ -38,8 +38,8 @@ class Test_ApiCase:
             print(msg)
             assert msg == 7200
 
-    @allure.story("01.创建客户")
-    def test_create_customer01(self, token_fix):
+
+    def create_customer01(self, token_fix):
         # 初始化工具类，token
         ak,token = token_fix
         # 创建客户
@@ -89,12 +89,12 @@ class Test_ApiCase:
             assert value[0] > 0
         return value
 
-    @allure.story("02.查询客户")
-    def test_search_customer02(self, token_fix):
+
+    def search_customer02(self, token_fix):
         # 初始化工具类
         ak, token = token_fix
         with allure.step("获取创建客户接口获取客户ID"):
-            value = self.test_create_customer01(token_fix)
+            value = self.create_customer01(token_fix)
         # 查询客户
         with allure.step("查询客户接口"):
             #url = URL +'v2/customers'

@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Sun Jan 28 20:44:03 CST 2024","Sun Jan 28 20:44:04 CST 2024","307","testcase","testcase01","TestTree","","","用户名密码错误，登录失败",""
+"broken","Sun Jan 28 20:44:04 CST 2024","Sun Jan 28 20:44:04 CST 2024","0","testcase","testcase01","TestTree","","","test_case03",""
+"passed","Sun Jan 28 20:44:03 CST 2024","Sun Jan 28 20:44:03 CST 2024","381","testcase","testcase01","TestTree","","","用户名密码正确，登录成功",""
+"passed","Sun Jan 28 20:44:04 CST 2024","Sun Jan 28 20:44:04 CST 2024","329","testcase","testcase01","TestTree","","","创建新客户",""
+"broken","Sun Jan 28 20:44:04 CST 2024","Sun Jan 28 20:44:04 CST 2024","356","testcase","testcase01","TestTree","","","用户名密码错误，登录失败",""
